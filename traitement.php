@@ -10,7 +10,11 @@ session_start();
 
 // 2 - Vérification de l'existence d'une requête POST
 
-if(isset($_POST['submit'])){
+// isset determine si une var déclarée est DIFFERENTE de null. Ressort false si null. True si les parametres sont définis.
+
+// Dans ce cas, on vérifie que la clé 'submit' est bien existante =>
+
+if(isset($_POST['submit'])){ 
 
     //$_POST est un array donc on vérifie la présence de la clé "submit". 
     // Cette clé c'est "name" du bouton Ajouter le produit.
@@ -22,6 +26,31 @@ if(isset($_POST['submit'])){
 
     // Donc si il y a un input de la part de l'utilisateur, on va vérifier les entrées.
     // LIMITE LES FAILLES XSS ET INJECTION SQL
+
+    // Les var $name etc ressortent nettoyées (théoriquement) Il faut vérifier si la filtration s'est bien déroulée.
+
+    if($name && $price && $qtt){
+
+        // Les filtres renvoient True si OK. Sinon ça renvoie false ou null. Donc pas besoin de comparer à quoi que ce soit.
+        // Si tout est ok on peut passer au stockage des données en session dans un array
+
+        // $product = [
+        //     "name" => $name, "price"=> $price, "qtt" => $qtt, "total" => $price*$qtt
+        // ];
+
+        // Affichage en row de l'array product qui contient donc toutes nos données.
+
+        $product = [
+            "name" => $name, 
+            "price"=> $price, 
+            "qtt" => $qtt, 
+            "total" => $price*$qtt
+        ];
+
+        // Ensuite on enregistre ces données dans $_SESSION qui est un tableau qui contient toutes les données de la Session et stockées côté serveur.
+        $_SESSION['products'][] = $product; // On push l'array $_SESSION ayant pour clé 'products' et on met notre array product dedans.
+    }
+
 }
 
 header("Location:index.php");
