@@ -8,15 +8,25 @@
 
 session_start(); 
 
-// 2 - Vérification de l'existence d'une requête POST
+// 2 - Vérification de l'existence d'une requête POST (GET par défaut)
 
-// isset determine si une var déclarée est DIFFERENTE de null. Ressort false si null. True si les parametres sont définis.
+// isset de façon générale determine si une var déclarée est DIFFERENTE de null. Ressort false si null. True si les parametres sont définis.
 
-// Dans ce cas, on vérifie que la clé 'submit' est bien existante =>
+// Dans ce cas, isset($_POST['submit']) permet de vérifier si il y a eu un input ayant pour nom 'submit' (si le bouton a été appuyé). Si tel est le cas alors 
+// des données seront stockées dans $_POST['submit']. 'submit' étant le nom du bouton, il est stocké sous forme de clé pour en récupérer les données plus facilement.
 
 if(isset($_POST['submit'])){ 
 
-    //$_POST est un array donc on vérifie la présence de la clé "submit". 
+    // IMPORTANT :
+
+    // var_dump($_POST);
+    // die('hello');
+
+    // Die permet de stopper tout le scrip. là on affiche hello avant la fin du script. Ca permet de tester l'avancée du script si tout est ok en faisant un var dump.
+
+    // /IMPORTANT
+
+    //$_POST est un array associatif donc on vérifie la présence de la clé "submit". 
     // Cette clé c'est "name" du bouton Ajouter le produit.
     // La condition sera vraie si la requête POST transmet une clé Submit au serveur.
 
