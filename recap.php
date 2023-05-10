@@ -47,7 +47,7 @@
 
                     $totalGeneral = 0; // initialisation du total qu'on calcule au fur et à mesure du foreach.
 
-            foreach($_SESSION['products'] as $index =>$product){
+            foreach($_SESSION['products'] as $index => $product){
 
                 // On parcourt ici le tableau products et on ressort $index et $product pour en manipuler facilement les données.
                 
@@ -76,14 +76,22 @@
                 "</table>",
             "</div>";   
 
-            //colspan = '4' permet de fusionner 4 cellules dont le contenu sera "Total général:". Voir resultat car j'ai créé une border pour voir la diff.
+            //colspan = '4' permet de fusionner 4 cellules dont le contenu sera "Total général:". Voir resultat car j'ai créé une border pour voir la diff.           
 
         }      
+
+        
+        if(!isset($_SESSION['nbProducts']) || empty($_SESSION['nbProducts'])) {
+            echo "<p> Nombre de produits : 0 </p>";
+        } else {
+
+        $nbProducts = $_SESSION['nbProducts'];
+            echo "nombre de produits : ".$nbProducts;        
+        }
     
     ?>
 
     <form action ="traitement.php" method="post">
-
         <p>
             <input class ="btn_submit" type="submit" name="return" value="Retour">
         </p>

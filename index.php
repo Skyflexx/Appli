@@ -52,9 +52,24 @@
             </p>
             <p>
                 <input class ="btn_submit" type="submit" name="submit" value="Ajouter le produit">
-            </p>       
+            </p>   
+            
+           <?php   
+           
+            if(!isset($_SESSION['nbProducts']) || empty($_SESSION['nbProducts'])) {
+            echo "<p> Nombre de produits : 0 </p>";
+            } else {
+                $nbProducts = $_SESSION['nbProducts'];
+                echo "nombre de produits : ".$nbProducts;        
+            }
+
+        ?>
+
         </form>
     </div>
+
+    
+
 </section>
 
     

@@ -54,16 +54,15 @@ if(isset($_POST['submit'])){
             "name" => $name, 
             "price"=> $price, 
             "qtt" => $qtt, 
-            "total" => $price*$qtt
-        ];
+            "total" => $price*$qtt            
+        ];              
 
         // Ensuite on enregistre ces données dans $_SESSION qui est un tableau qui contient toutes les données de la Session et stockées côté serveur.
         $_SESSION['products'][] = $product; // On push l'array $_SESSION ayant pour clé 'products' et on met notre array product dedans.
+        $_SESSION['nbProducts']= count($_SESSION['products']); // Compte l'array nbProducts pour sortir le nombre de produits.
     }
 
 }
-
-
 
 if(isset($_POST['recap'])){
 
