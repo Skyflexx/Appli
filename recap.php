@@ -13,6 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -29,9 +30,7 @@
             echo "<p> aucun produit en session...</p>";
         } else {
 
-            // Si une clé existe et qu'il y a des produits qui ont été add, alors on peut afficher ce que l'utilisateur a ajouté :
-
-            
+            // Si une clé existe et qu'il y a des produits qui ont été add, alors on peut afficher ce que l'utilisateur a ajouté :            
 
             echo "<div class='container'>",
                     "<table class='table table-striped'>",
@@ -65,9 +64,7 @@
                 // tr pour nouvelle ligne (table Row). On affichera à chaque fois le $product[item]. product étant un tableau qu'on a initialisé à chaque input contenant un name, un price, une qtt et un total.
                 // number_format permet de formatter un nombre.
                 // number_format(float $nombre (ici le price), int decimale (2chiffre après virgule ici), le séparateur sous forme de string "," ou "." mais aussi "<br>" par ex)
-             }   
-
-              
+             }                 
 
             // Fermeture du tableau
                         
@@ -81,9 +78,16 @@
 
             //colspan = '4' permet de fusionner 4 cellules dont le contenu sera "Total général:". Voir resultat car j'ai créé une border pour voir la diff.
 
-        }
+        }      
     
     ?>
+
+    <form action ="traitement.php" method="post">
+
+        <p>
+            <input class ="btn_submit" type="submit" name="return" value="Retour">
+        </p>
+    </form>
 
     
 </body>

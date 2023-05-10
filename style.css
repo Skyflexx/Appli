@@ -2,11 +2,11 @@
     margin : 0;
     padding : 0;
     box-sizing: border-box;
-    vertical-align: top;
+    vertical-align: top;   
 }
 
 header{
-    width : 95vh;
+    width : 80vh;
     background-color: rgba(12, 145, 223, 0.767);
     text-align: center;
     margin : auto auto;
@@ -24,6 +24,24 @@ h1{
     border : 1px solid orange;
     border-radius: 20px;   
     text-align: center;
+    margin : auto auto;
+}
+
+nav{
+    padding : 0;
+    border : 1px solid orange;
+    border-radius: 15px;   
+    text-align: center;
+    margin-right: 50px;
+}
+
+#menu{
+    background-color: orange;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding : 5px 10px;
+    color : white;
+    font-weight: bold;
 }
 
 .btn_submit{
@@ -32,7 +50,15 @@ h1{
     background-color: rgba(12, 145, 223, 0.767);
     border-radius: 15px;
     padding : 5px 10px;
+    margin : 0 5px;
     color : white;
     font-weight: bold;
+}
+
+section{
+    width : 80vh;
+    display : flex;
+    flex-direction: row;
+    margin : auto;
 }
 

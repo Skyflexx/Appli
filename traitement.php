@@ -63,6 +63,24 @@ if(isset($_POST['submit'])){
 
 }
 
+
+
+if(isset($_POST['recap'])){
+
+    header("Location:recap.php");
+
+    exit; // important car sinon le script continue et c'est le header du dessous qui sera chargé.    
+}
+
+if(isset($_POST['return'])){
+
+    header("Location:index.php");
+
+    exit; // important car sinon le script continue et c'est le header du dessous qui sera chargé.    
+}
+
+
+
 header("Location:index.php");
 
 exit;

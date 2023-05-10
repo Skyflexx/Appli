@@ -16,33 +16,46 @@
 <header>
     <h1>SHOP</h1>
 </header>
+
+<section>
+
+    <nav> 
+        <p id="menu"> Menu </p>
+
+        <form action ="traitement.php" method="post">
+            <p>
+                <input class ="btn_submit" type="submit" name="recap" value="Voir le récapitulatif">
+            </p>
+        </form>
+    </nav>
+
+    <div class="container">
     
-<div class="container">
-   
-    <form action ="traitement.php" method="post">
-        <p>
-            <label>
-                Nom du produit :
-                <input type="text" name="name">
-            </label>
-        </p>
-        <p>
-            <label>
-                Prix du produit :
-                <input type="number" step="any" name="price">
-            </label>
-        </p>
-        <p>
-            <label>
-                Quantité désirée : :
-                <input type="number" name="qtt" value="1">
-            </label>
-        </p>
-        <p>
-            <input class ="btn_submit" type="submit" name="submit" value="Ajouter le produit">
-        </p>
-    </form>
-</div>
+        <form action ="traitement.php" method="post">
+            <p>
+                <label>
+                    Nom du produit :
+                    <input type="text" name="name">
+                </label>
+            </p>
+            <p>
+                <label>
+                    Prix du produit :
+                    <input type="number" step="any" name="price">
+                </label>
+            </p>
+            <p>
+                <label>
+                    Quantité désirée :
+                    <input type="number" name="qtt" value="1">
+                </label>
+            </p>
+            <p>
+                <input class ="btn_submit" type="submit" name="submit" value="Ajouter le produit">
+            </p>       
+        </form>
+    </div>
+</section>
 
     
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>    
