@@ -5,19 +5,31 @@
     vertical-align: top;   
 }
 
-header{
-    width : 80vh;
-    background-color: rgba(12, 145, 223, 0.767);
-    text-align: center;
-    margin : auto auto;
-    border-radius: 20px;
-}
+/* ECRITURES */
 
 h1{
     text-align: center;
     color : white;
     padding : 20px 0;
+    font-size: 5em;
 }
+
+P{
+    font-size: 1.5em;
+}
+
+/* //////////////////////////////////////////// */
+
+header{
+    width : 80vh;
+    background-color: rgba(12, 145, 223, 0.767);
+    text-align: center;
+    margin : 10px auto 20px auto;
+    
+    border-radius: 20px;    
+}
+
+
 
 .container{    
     padding : 20px 0;
@@ -28,11 +40,20 @@ h1{
 }
 
 nav{
+    width : 200px;
     padding : 0;
     border : 1px solid orange;
     border-radius: 15px;   
     text-align: center;
     margin-right: 50px;
+}
+
+ul{
+    padding : 0;
+}
+
+li{
+    list-style-type: none;
 }
 
 #menu{
@@ -53,6 +74,7 @@ nav{
     margin : 0 5px;
     color : white;
     font-weight: bold;
+    font-size: 1.5em;
 }
 
 section{

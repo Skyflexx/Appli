@@ -60,8 +60,11 @@ if(isset($_POST['submit'])){
         // Ensuite on enregistre ces données dans $_SESSION qui est un tableau qui contient toutes les données de la Session et stockées côté serveur.
         $_SESSION['products'][] = $product; // On push l'array $_SESSION ayant pour clé 'products' et on met notre array product dedans.
         $_SESSION['nbProducts']= count($_SESSION['products']); // Compte l'array nbProducts pour sortir le nombre de produits.
+        $_SESSION['checkSuccess'] = "Produit ajouté avec succès !";       
     }
 
+} else{    
+    $_SESSION['checkSuccess'] = "Echec !"; // Message indiquant que le produit n'est pas ajouté correctement
 }
 
 if(isset($_POST['recap'])){
@@ -74,15 +77,21 @@ if(isset($_POST['recap'])){
 if(isset($_POST['return'])){
 
     header("Location:index.php");
+    $_SESSION['checkSuccess'] = ""; // On réinitialise checkSuccess sinon un message apparaitra
 
     exit; // important car sinon le script continue et c'est le header du dessous qui sera chargé.    
+}
+
+if(isset($_POST['deleteProduct'])){
+
+    exit;
 }
 
 
 
 header("Location:index.php");
 
-exit;
+
 
 // Spécifie l'entête HTTP sous forme brute lors de l'envoi des fichiers HTML.
 // Utiliser cette fct avant toute écriture de code sous peine de perturber la réponse à émettre au client.
