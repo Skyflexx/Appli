@@ -84,3 +84,14 @@ section{
     margin : auto;
 }
 
+
+.qtt{
+    display : inline;
+   
+}
+
+.btn {
+    
+    --bs-btn-padding-x: 0.35rem;
+    --bs-btn-padding-y: 0.35rem;
+}
