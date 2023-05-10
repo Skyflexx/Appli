@@ -82,16 +82,8 @@ if(isset($_POST['return'])){
     exit; // important car sinon le script continue et c'est le header du dessous qui sera chargé.    
 }
 
-if(isset($_POST['deleteProduct'])){
-
-    exit;
-}
-
-
 
 header("Location:index.php");
-
-
 
 // Spécifie l'entête HTTP sous forme brute lors de l'envoi des fichiers HTML.
 // Utiliser cette fct avant toute écriture de code sous peine de perturber la réponse à émettre au client.

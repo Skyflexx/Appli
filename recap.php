@@ -73,7 +73,7 @@
                             "<td>".number_format($product['price'], 2, ",")."&nbsp;€</td>",
                             "<td>".$product['qtt']."</td>",
                             "<td>".$product['total']."</td>",
-                            "<td><input class ='btn btn-danger' type='submit' name='deleteBtn' value='Supprimer'></td>",
+                            "<td><form action ='delete.php' method='post'><input class ='btn btn-danger' type='submit' name='$index' value='Supprimer'></form></td>",
                         "</tr>";
 
                         $totalGeneral += $product['total'];
@@ -94,18 +94,21 @@
 
                 //colspan = '4' permet de fusionner 4 cellules dont le contenu sera "Total général:". Voir resultat car j'ai créé une border pour voir la diff.           
 
-            }      
+            }  
+         
 
-            
             if(!isset($_SESSION['nbProducts']) || empty($_SESSION['nbProducts'])) {
                 echo "<p> Nombre de produits : 0 </p>";
             } else {
 
             $nbProducts = $_SESSION['nbProducts'];
-                echo "Nombre de produits : ".$nbProducts;        
+                echo "Nombre de produits : ".$nbProducts.
+                "<form action ='delete.php' method='post'><input class ='btn btn-danger' type='submit' name='deleteAll' value='Tout supprimer'></form>";        
             }
         
         ?>
+
+        
 
     </div>  
 

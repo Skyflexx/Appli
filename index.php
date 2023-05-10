@@ -76,9 +76,7 @@
             
            <?php   
            
-                if(!isset($_SESSION['nbProducts']) || empty($_SESSION['nbProducts'])) {
-                    
-                
+                if(!isset($_SESSION['nbProducts']) || empty($_SESSION['nbProducts'])) {                
                 
                 } else {                    
                     $message = $_SESSION['checkSuccess'];
