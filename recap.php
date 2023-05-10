@@ -22,7 +22,7 @@
 <body>
 
 <header>
-    <h1>SHOP</h1>
+    <h1>Shop</h1>
 </header>
 
     <section>
@@ -44,7 +44,7 @@
         // empty() 'products' est bien présent mais il n'y a aucune valeur à l'intérieur.
 
             if(!isset($_SESSION['products']) || empty($_SESSION['products'])) {
-                echo "<p> aucun produit en session...</p>";
+                
             } else {
 
                 // Si une clé existe et qu'il y a des produits qui ont été add, alors on peut afficher ce que l'utilisateur a ajouté :            

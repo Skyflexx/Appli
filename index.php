@@ -23,7 +23,7 @@
 <body>
 
 <header>
-    <h1>LITTLE SHOP</h1>
+    <h1>Shop</h1>
 </header>
 
 <section>
