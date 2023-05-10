@@ -63,9 +63,11 @@ if(isset($_POST['submit'])){
         $_SESSION['checkSuccess'] = "Produit ajouté avec succès !";       
     }
 
-} else{    
+} else {    
     $_SESSION['checkSuccess'] = "Echec !"; // Message indiquant que le produit n'est pas ajouté correctement
 }
+
+// Redirections diverses
 
 if(isset($_POST['recap'])){
 

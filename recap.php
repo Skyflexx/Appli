@@ -71,7 +71,7 @@
                             "<td>".$index."</td>", // On ressort l'index qui est la clé du produit (0, 1, 2 ...)
                             "<td>".$product['name']."</td>", // name étant la clé qui permet de sortir le nom du produit. Ca aurait pu être 0, 1 ou 2 mais c'est plus facile de rename la clé.
                             "<td>".number_format($product['price'], 2, ",")."&nbsp;€</td>",
-                            "<td>"."<form class ='qtt' action ='traitement.php' method='post'><input class ='btn btn-warning' type='submit' name='minus' value='-'></form>&nbsp;".$product['qtt']."&nbsp;<form class ='qtt' action ='traitement.php' method='post'><input class ='btn btn-warning' type='submit' name='plus' value='+'></form></td>",
+                            "<td>"."<form class ='qtt' action ='quantity.php' method='post'><input class ='btn btn-warning' type='submit' name='lessQtt' value='-'></form>&nbsp;".$product['qtt']."&nbsp;<form class ='qtt' action ='quantity.php' method='post'><input class ='btn btn-warning' type='submit' name='plusQtt' value='+'></form></td>",
                             "<td>".$product['total']."</td>",
                             "<td><form action ='delete.php' method='post'><input class ='btn btn-danger' type='submit' name='$index' value='Supprimer'></form></td>",
                         "</tr>";
