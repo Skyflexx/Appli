@@ -1,0 +1,38 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    vertical-align: top;
+}
+
+header{
+    width : 95vh;
+    background-color: rgba(12, 145, 223, 0.767);
+    text-align: center;
+    margin : auto auto;
+    border-radius: 20px;
+}
+
+h1{
+    text-align: center;
+    color : white;
+    padding : 20px 0;
+}
+
+.container{    
+    padding : 20px 0;
+    border : 1px solid orange;
+    border-radius: 20px;   
+    text-align: center;
+}
+
+.btn_submit{
+    text-decoration: none;
+    border: none;
+    background-color: rgba(12, 145, 223, 0.767);
+    border-radius: 15px;
+    padding : 5px 10px;
+    color : white;
+    font-weight: bold;
+}
+
