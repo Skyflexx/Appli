@@ -20,6 +20,13 @@ foreach ($_POST as $key => $value){ // On parcourt le tableau $_POST qui contien
     }
 }
 
+// if (isset($_POST['Supprimer'])){
+
+//   if(isset($_POST[]))
+    
+
+// }
+
 if (isset($_POST['deleteAll'])){
 
     unset($_SESSION['products']); 

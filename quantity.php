@@ -16,8 +16,8 @@ foreach ($_POST as $valueOfBtn) // On parcourt le tableau $_POST qui contient le
                     
                         $_SESSION['products'][$index]["qtt"] -= 1; // Multi dimensionnel array. A chaque strate on selectionne la clé pour accéder à notre variable !
                         $_SESSION['products'][$index]["total"]= ($_SESSION['products'][$index]["qtt"]) * ($_SESSION['products'][$index]["price"]); // Sans oublier de modifier le total du prix en fct de la qtt 
-                    }        
-                    
+                    }   
+                                     
                     header("Location:recap.php");
                 }
             }
