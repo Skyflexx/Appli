@@ -32,7 +32,7 @@ if(isset($_POST['submit'])){
 
     $name = filter_input(INPUT_POST, "name", FILTER_SANITIZE_STRING);
     $price = filter_input(INPUT_POST, "price", FILTER_VALIDATE_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
-    $qtt = filter_input(INPUT_POST, "qtt", FILTER_VALIDATE_INT);
+    $qtt = filter_input(INPUT_POST, "qtt", FILTER_VALIDATE_INT);    
 
     // Donc si il y a un input de la part de l'utilisateur, on va vérifier les entrées.
     // LIMITE LES FAILLES XSS ET INJECTION SQL
@@ -49,7 +49,7 @@ if(isset($_POST['submit'])){
         // ];
 
         // Affichage en row de l'array product qui contient donc toutes nos données.
-
+        
         $product = [
             "name" => $name, 
             "price"=> $price, 
@@ -61,12 +61,12 @@ if(isset($_POST['submit'])){
         $_SESSION['products'][] = $product; // On push l'array $_SESSION ayant pour clé 'products' et on met notre array product dedans.
         $_SESSION['nbProducts']= count($_SESSION['products']); // Compte l'array nbProducts pour sortir le nombre de produits.
         $_SESSION['checkSuccess'] = "Produit ajouté avec succès !";       
+    } else {
+        $_SESSION['checkSuccess'] = "Veuillez vérifier les données saisies !"; // Message indiquant que le produit n'est pas ajouté correctement
     }
 
-} else {    
-    $_SESSION['checkSuccess'] = "Echec !"; // Message indiquant que le produit n'est pas ajouté correctement
 }
-
+ 
 // Redirections diverses
 
 if(isset($_POST['recap'])){
@@ -83,7 +83,6 @@ if(isset($_POST['return'])){
 
     exit; // important car sinon le script continue et c'est le header du dessous qui sera chargé.    
 }
-
 
 header("Location:index.php");
 

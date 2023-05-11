@@ -68,21 +68,14 @@
             <p>
                 <label>
                     Quantité désirée :
-                    <input type="number" name="qtt" value="1">
+                    <input type="number" name="qtt" value="1" min="1">
                 </label>
             </p>
             
             <input class ="btn_submit" type="submit" name="submit" value="Ajouter le produit">             
             
-           <?php   
-           
-                if(!isset($_SESSION['nbProducts']) || empty($_SESSION['nbProducts'])) {                
-                
-                } else {                    
-                    $message = $_SESSION['checkSuccess'];
-                    echo "<p>".$message."</p>";        
-                }
-
+           <?php         
+                echo "<p>".$_SESSION['checkSuccess']."<p>"; 
             ?>
 
         </form>
