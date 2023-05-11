@@ -74,8 +74,14 @@
             
             <input class ="btn_submit" type="submit" name="submit" value="Ajouter le produit">             
             
-           <?php         
+           <?php    
+             if(isset($_SESSION['Products']) || !empty($_SESSION['Products'])) { // Si il y a une clé product dans Isset ou si le tableau product n'est pas vide, alors on peut utiliser $_session checksuccess.
+                   
                 echo "<p>".$_SESSION['checkSuccess']."<p>"; 
+
+             } else {
+                echo "<p> Veuillez ajouter un produit.</p>"; // Sinon on affiche un message manuellement car sinon $_session retournera une erreur puisqu'il est vide et que $checksuccess n'existe pas encore.
+             }
             ?>
 
         </form>
