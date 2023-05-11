@@ -103,7 +103,7 @@
 
                 $nbProducts = $_SESSION['nbProducts'];
                     echo "Nombre de produits : ".$nbProducts.
-                    "<form action ='delete.php' method='post'><input class ='btn btn-danger' type='submit' name='deleteAll' value='Tout supprimer'></form>";        
+                    "<form action ='delete.php' method='post'><input id='deleteBtnAll' class ='btn btn-danger' type='submit' name='deleteAll' value='Tout supprimer'></form>";        
                 }
             ?> 
         </div>  

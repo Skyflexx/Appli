@@ -62,7 +62,7 @@ if(isset($_POST['submit'])){
         $_SESSION['nbProducts']= count($_SESSION['products']); // Compte l'array nbProducts pour sortir le nombre de produits.
         $_SESSION['checkSuccess'] = "Produit ajouté avec succès !";       
     } else {
-        $_SESSION['checkSuccess'] = "Veuillez vérifier les données saisies !"; // Message indiquant que le produit n'est pas ajouté correctement
+        $_SESSION['checkSuccess'] = "Echec de l'ajout du produit !"; // Message indiquant que le produit n'est pas ajouté correctement
     }
 
 }
@@ -78,8 +78,11 @@ if(isset($_POST['recap'])){
 
 if(isset($_POST['return'])){
 
+    $_SESSION['checkSuccess'] = "Veuillez ajouter un produit";
+
     header("Location:index.php");
-    $_SESSION['checkSuccess'] = ""; // On réinitialise checkSuccess sinon un message apparaitra
+
+    // On réinitialise checkSuccess sinon un message apparaitra
 
     exit; // important car sinon le script continue et c'est le header du dessous qui sera chargé.    
 }

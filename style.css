@@ -7,7 +7,7 @@
 }
 
 body{
-    background-color: rgb(46, 46, 46);  
+    /* background-color: rgb(46, 46, 46);   */
 }
 
 /* ECRITURES */
@@ -35,15 +35,7 @@ header{
 }
 
 
-
-.container{    
-    padding : 20px 0;
-    border : 1px solid orange;
-    border-radius: 20px;   
-    text-align: center;
-    margin : auto auto;
-    background-color: white;
-}
+/*------------------------------------------------------*/
 
 nav{
     width : 200px;
@@ -52,7 +44,7 @@ nav{
     border-radius: 15px;   
     text-align: center;
     margin-right: 50px;
-    background-color: white;
+    /* background-color: white; */
 }
 
 ul{
@@ -72,17 +64,7 @@ li{
     font-weight: bold;
 }
 
-.btn_submit{
-    text-decoration: none;
-    border: none;
-    background-color: rgba(12, 145, 223, 0.767);
-    border-radius: 15px;
-    padding : 5px 10px;
-    margin : 0 5px;
-    color : white;
-    font-weight: bold;
-    font-size: 1.5em;
-}
+/*----------------------------------------------*/
 
 section{
     width : 80vh;
@@ -91,14 +73,48 @@ section{
     margin : auto;
 }
 
-
-.qtt{
-    display : inline;
-   
+.container{    
+    padding : 20px 0;
+    border : 1px solid orange;
+    border-radius: 20px;   
+    text-align: center;
+    margin : auto auto;
+    /* background-color: white; */
 }
 
-.btn {
-    
+input{
+    outline: none; /*Retrait de la bordure auto*/
+    padding-left : 10px;
+    border: 1px solid orange;
+    border-radius: 20px;
+}
+
+input:focus{
+    outline: none;
+    border: 1px solid  rgba(12, 145, 223, 0.767);
+}
+
+.btn_submit{
+    text-decoration: none;
+    border: none;
+    background-color: rgba(12, 145, 223, 0.767);
+    border-radius: 15px;
+    padding : 5px 10px;
+    margin : 0px 5px 15px 5px;
+    color : white;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+#deleteBtnAll{
+    margin-top : 10px;
+}
+
+.qtt{
+    display : inline;   
+}
+
+.btn {    
     --bs-btn-padding-x: 0.35rem;
     --bs-btn-padding-y: 0.35rem;
 }

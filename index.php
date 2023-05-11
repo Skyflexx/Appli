@@ -1,10 +1,17 @@
 <?php
 
     session_start(); // Avant toute chose on lance la session pour récup les données actuelles.
+    
 
     // session start permet non seulement de démarrer une session mais aussi 
     // de récupérer les données d'une session en cours pour un utilisateur (un navigateur du coup) via l'ID unique
 
+    if(!isset($_SESSION['checkSuccess'])|| empty(['checkSuccess'])){
+
+        $_SESSION['checkSuccess'] = "Veuillez ajouter un produit";
+
+    }
+    
 ?>
 
 <!DOCTYPE html>
@@ -62,7 +69,7 @@
             <p>
                 <label>
                     Prix du produit :
-                    <input type="number" step="any" name="price">
+                    <input type="number" step="any" name="price" min="0">
                 </label>
             </p>
             <p>
@@ -74,14 +81,13 @@
             
             <input class ="btn_submit" type="submit" name="submit" value="Ajouter le produit">             
             
-           <?php    
-             if(isset($_SESSION['Products']) || !empty($_SESSION['Products'])) { // Si il y a une clé product dans Isset ou si le tableau product n'est pas vide, alors on peut utiliser $_session checksuccess.
-                   
+           <?php   
                 echo "<p>".$_SESSION['checkSuccess']."<p>"; 
+                    //  if(isset($_SESSION['nbProducts']) || !empty($_SESSION['nbProducts'])) { // Si il y a une clé product dans Isset ou si le tableau product n'est pas vide, alors on peut utiliser $_session checksuccess.
+                        
+                    //     echo "<p>".$_SESSION['checkSuccess']."<p>"; 
 
-             } else {
-                echo "<p> Veuillez ajouter un produit.</p>"; // Sinon on affiche un message manuellement car sinon $_session retournera une erreur puisqu'il est vide et que $checksuccess n'existe pas encore.
-             }
+                    //  } else echo "Veuillez ajouter un produit !"
             ?>
 
         </form>
