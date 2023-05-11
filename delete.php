@@ -17,9 +17,7 @@ foreach ($_POST as $key => $value){ // On parcourt le tableau $_POST qui contien
                 header("Location:recap.php"); // Redirection à la page récap.
             }
         }
-
     }
-
 }
 
 if (isset($_POST['deleteAll'])){
@@ -28,12 +26,7 @@ if (isset($_POST['deleteAll'])){
 
     $_SESSION['nbProducts'] = 0; 
 
-    header("Location:recap.php"); // Redirection à la page récap.
-
-    
+    header("Location:recap.php"); // Redirection à la page récap.    
 }
-
-
-
 
 ?>
