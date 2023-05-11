@@ -22,7 +22,7 @@ foreach ($_POST as $valueOfBtn) // On parcourt le tableau $_POST qui contient le
                 }
             }
 
-        } else if($value == "+"){
+        } else if($valueOfBtn == "+"){
 
             foreach ($_SESSION['products'] as $index => $product) 
             {
