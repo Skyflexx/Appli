@@ -48,10 +48,11 @@ session_start(); // démarrage de la session
 
 if (isset($_POST['addOne'])){
 
+    $produit = $_SESSION['products'][$_POST['productIndex']];
     
     $_SESSION['products'][$_POST['productIndex']]["qtt"] += 1; // Multi dimensionnel array. A chaque strate on selectionne la clé pour accéder à notre variable !
     $_SESSION['products'][$_POST['productIndex']]["total"]= ($_SESSION['products'][$_POST['productIndex']]["qtt"]) * ($_SESSION['products'][$_POST['productIndex']]["price"]); // Sans oublier de modifier le total du prix en fct de la qtt                                                   
-    
+       
     header("Location:recap.php");    
 }
 
