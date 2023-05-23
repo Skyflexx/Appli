@@ -17,6 +17,8 @@
 
     Session : Moyen de stocker des infos lors d'une session utilisateur à l'aide d'un identifiant unique. Ainsi les informations peuvent persister si on change de page
     par exemple.
+
+    XSS (Cross-site scripting) : Faille côté navigateur qui permet d'injecter du code dans un input (du code lisible par le nav, html css js). Pouvant récupérer par ce biais des infos côté client donc depuis les cookies.
         
     */ 
 
