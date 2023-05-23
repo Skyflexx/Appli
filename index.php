@@ -1,5 +1,25 @@
 <?php
 
+    // Définitions : 
+
+    /*
+    
+    Requête HTTP : Requête envoyée sour forme d'URL au serveur. En précisant la méthode (get ou post). Dans le cas de Get, on demande au serveur de nous donner quelque
+    chose. Si c'est ok le fichier nous est envoyé puis interpreté par le navigateur, pour finir par l'affichage sur l'écran. Dans le cas de PHP le fichier est interpreté côté 
+    serveur.
+
+    Requête HTTPS : Extension sécurité de HTTP. Via un protocole SSL (Secure sockets Layer). Actuellement on utilise TSL au lieu de SSL. (Transport Layer Security)
+
+    Le client et le serveur communiquent entre eux, procèdent à des vérifications afin de vérifier si une discussion sécurisée peut avoir lieu. Si tel est le cas ils vont échanger
+    des données de façon cryptée. Le décryptage se faisant grace à une clé. 
+
+    Superglobales : Variables globales natives à Php et accessibles partout dans le script. Sous la forme de tableaux associatifs, elles permettent un stockage de données diverses.
+
+    Session : Moyen de stocker des infos lors d'une session utilisateur à l'aide d'un identifiant unique. Ainsi les informations peuvent persister si on change de page
+    par exemple.
+        
+    */ 
+
     session_start(); // Avant toute chose on lance la session pour récup les données actuelles.
     
 
